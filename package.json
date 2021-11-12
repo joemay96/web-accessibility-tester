@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "docker:build": "docker build -t \"joemay96/website-accessibility-tester:$npm_config_tag\" .",
+    "docker:push": "docker push \"joemay96/website-accessibility-tester:$npm_config_tag\"",
+    "docker": "npm run docker:build && npm run docker:push"
   },
   "keywords": [],
   "author": "",
